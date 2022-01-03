@@ -1,0 +1,21 @@
+schema{
+    query:Query
+}
+
+type Query{
+    allStudents: [Student]
+    student(id: ID): Student
+}
+
+type Student{
+    studentId:ID!
+    studentName:String
+    studentAddress:String
+    age:Int
+    lecture:Lecture
+}
+
+type Lecture{
+lectureId:ID!
+lectureName:String
+}
